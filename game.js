@@ -97,7 +97,7 @@
     mode = 'paused';
     resetInput();
     ui.eyebrow.textContent = 'TRANSMISSION ON HOLD';
-    ui.title.textContent = 'SIGNAL PAUSED.';
+    ui.title.textContent = 'FLIGHT PAUSED.';
     ui.copy.textContent = 'Take a breath. The galaxy can wait.';
     ui.stats.hidden = true;
     ui.start.textContent = 'RESUME FLIGHT →';
@@ -129,7 +129,7 @@
       try { localStorage.setItem('last-signal-best', String(best)); } catch (_) { /* A run never depends on storage. */ }
     }
     ui.eyebrow.textContent = newBest ? 'NEW PERSONAL BEST' : 'TRANSMISSION LOST';
-    ui.title.textContent = 'SIGNAL LOST.';
+    ui.title.textContent = 'GAME OVER.';
     ui.copy.textContent = reason;
     ui.finalScore.textContent = score.toLocaleString();
     ui.finalWave.textContent = String(wave).padStart(2, '0');
