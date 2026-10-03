@@ -40,8 +40,8 @@ h1 { margin: 0; font-size: 19px; letter-spacing: 5px; font-weight: 750; }
 .pause-button:disabled { opacity: .35; cursor: default; }
 .playfield { position: relative; background: #090d1d; }
 canvas { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; outline: none; touch-action: none; }
-.overlay { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; background: linear-gradient(90deg, #090b1850, #090b18b0 45%, #090b1850); }
-.screen-card { text-align: center; width: min(100%, 460px); }
+.overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; overflow-y: auto; padding: 24px; background: linear-gradient(90deg, #090b1850, #090b18b0 45%, #090b1850); }
+.screen-card { text-align: center; width: min(100%, 460px); margin-block: auto; flex-shrink: 0; }
 .eyebrow { margin: 0 0 20px; color: var(--amber); font: 10px Consolas, monospace; letter-spacing: 3.5px; }
 h2 { margin: 0; font-size: clamp(28px, 5vw, 53px); line-height: 1.06; letter-spacing: -1.5px; font-weight: 850; white-space: pre-line; }
 h2 span { color: var(--cyan); text-shadow: 0 0 40px #7bf3ec25; }
