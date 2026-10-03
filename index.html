@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090b18">
+    <title>Last Signal — Space Arcade</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./game.js" defer></script>
+  </head>
+  <body>
+    <main class="arcade">
+      <header class="masthead">
+        <div class="brand"><span class="brand-mark" aria-hidden="true">✦</span><div><h1>LAST SIGNAL</h1><p>ORBITAL DEFENSE SYSTEM</p></div></div>
+        <span class="sector"><span class="status-light"></span> SECTOR 07 / ONLINE</span>
+      </header>
+
+      <section class="game-shell" aria-label="Space arcade game">
+        <div class="hud">
+          <div class="hud-item"><span class="hud-label">SCORE</span><span id="score" class="hud-value">000000</span></div>
+          <div class="hud-item best"><span class="hud-label">PERSONAL BEST</span><span id="best" class="hud-value muted">000000</span></div>
+          <div class="hud-item wave"><span class="hud-label">WAVE</span><span id="wave" class="hud-value">01</span></div>
+          <div class="hud-item hull"><span class="hud-label">HULL</span><span id="lives" class="health" aria-label="3 lives"><i></i><i></i><i></i></span></div>
+          <button id="pause-button" class="pause-button" type="button" aria-label="Pause game" disabled>Ⅱ</button>
+        </div>
+
+        <div class="playfield">
+          <canvas id="game" width="960" height="600" tabindex="0" aria-label="Move with WASD or arrow keys. Fire with Space. Pause with P or Escape.">Your browser needs Canvas support to play this game.</canvas>
+          <div id="overlay" class="overlay">
+            <div class="screen-card">
+              <p id="screen-eyebrow" class="eyebrow">INCOMING TRANSMISSION</p>
+              <h2 id="screen-title">DEFEND THE<br><span>LAST SIGNAL.</span></h2>
+              <p id="screen-copy" class="screen-copy">One ship. An endless invasion.<br>Keep the stars on your side.</p>
+              <div id="run-stats" class="run-stats" hidden><div><span>FINAL SCORE</span><strong id="final-score">0</strong></div><div><span>WAVE REACHED</span><strong id="final-wave">1</strong></div></div>
+              <button id="start-button" class="primary-button" type="button">LAUNCH SHIP <span aria-hidden="true">→</span></button>
+              <p id="screen-hint" class="screen-hint">OR PRESS ENTER / SPACE</p>
+            </div>
+          </div>
+          <span class="field-tag" aria-hidden="true">DEEP SPACE / 07.24</span>
+          <span id="announcement" class="sr-only" role="status" aria-live="polite"></span>
+        </div>
+
+        <footer class="controls">
+          <div><span class="control-label">MOVE</span> <kbd>W A S D</kbd><span class="or">/</span><kbd>↑ ← ↓ →</kbd></div>
+          <div><span class="control-label">FIRE</span> <kbd>SPACE</kbd></div>
+          <div><span class="control-label">PAUSE</span> <kbd>P</kbd><span class="or">/</span><kbd>ESC</kbd></div>
+        </footer>
+      </section>
+
+      <div class="touch-controls" aria-label="Touch controls">
+        <div class="direction-pad"><button type="button" data-control="ArrowUp" class="touch-up" aria-label="Move up">↑</button><button type="button" data-control="ArrowLeft" class="touch-left" aria-label="Move left">←</button><button type="button" data-control="ArrowDown" class="touch-down" aria-label="Move down">↓</button><button type="button" data-control="ArrowRight" class="touch-right" aria-label="Move right">→</button></div>
+        <button type="button" data-control="Space" class="touch-fire" aria-label="Fire">FIRE <span>✦</span></button>
+      </div>
+      <p class="page-note">NO BACKUP. NO RETREAT. JUST ONE MORE WAVE.</p>
+    </main>
+  </body>
+</html>
